@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pega.la - Encurtador de links</title>
+</head>
+<body>
+  <h1>Encurte o seu link com o Pega.la</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur <br>
+     corporis, laboriosam delectus eligendi consequatur libero animi facere <br>
+     atque possimus nobis ullam quaerat dolore temporibus est aliquam voluptas <br>
+     quisquam quia id.</p>
+  <h4>Encurtar URLs</h4>
+  <form id="create">
+    <span id="error" style="color: red; display: none;">Por favor verifique a url digitada<br/></span>
+    <span id="result" style="display: none;">Sua nova URL: <a href="#"></a><br/></span>
+    <input type="text" name="url" placeholder="Digite a URL aqui">
+    <input type="submit">
+  </form>
+  <h4>Visualizar estatísticas</h4>
+  <form id="analytics">
+    <span id="error2" style="color: red; display: none;">Código ou URL não válido<br/></span>
+    <input type="text" name="code" placeholder="Digite código ou URL">
+    <input type="submit">
+  </form><br>
+  <div id="status" style="display: none">
+    <strong>Estatísticas</strong><br>
+    Criado em: <span></span><br>
+    Cliques: <span></span>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    $('#create').submit(function(e){
+      e.preventDefault();
+
+      $('#error').hide();
+      $('#result').hide();
+
+      var url = encodeURIComponent($('input[name="url"]').val());
+      $.getJSON('/api/v1/create?url=' + url,
+        function(data){
+          var url = location.protocol + '//' + location.hostname +
+            (location.port ? ':'+location.port: '') + '/' + data.id;
+
+          $('input[name="url"]').val('');
+          $('#result').find('a').attr('href', url).text(url);
+          $('#result').show();
+
+        }).fail(function(){
+          $('#error').show();
+        });
+    });
+
+    $('#analytics').submit(function(e){
+      e.preventDefault();
+
+      $('#status').hide();
+      $('#error2').hide();
+
+      var url = encodeURIComponent($('input[name="code"]').val());
+      $.getJSON('/api/v1/status?code=' + url,
+        function(data){
+          var url = location.protocol + '//' + location.hostname +
+            (location.port ? ':'+location.port: '') + '/' + data.id;
+
+          $('input[name="code"]').val('');
+
+          $('#status').find('span:first').text(data.date);
+          $('#status').find('span:last').text(data.hits);
+          $('#status').show();
+
+        }).fail(function(){
+          $('#error2').show();
+        });
+    });
+  </script>
+</body>
+</html>
