@@ -1,0 +1,12 @@
+{
+  "mode": "development",
+  "log": false,
+  "db": "links",
+  "secure": false,
+  "ssl": {
+    "key": "",
+    "cert": "",
+    "ca": ""
+  },
+  "port": 8080
+}

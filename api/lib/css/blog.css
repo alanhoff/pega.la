@@ -1,0 +1,367 @@
+/* Blog Items */
+	
+	.setposts {
+		
+	}
+
+	.blog-item {
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+		margin:40px;
+	}
+	
+	#blog-wrap .blog-item {
+		margin: 40px 0;
+	}
+	
+	.latest-news .blog-item {
+		margin:10px;
+		margin-bottom:0px;
+	}
+	
+	.blog-item-fade {
+		opacity:0;
+		border-bottom:#ebebeb 1px solid;
+		padding-bottom:30px;
+	}
+
+	.latest-news .blog-item-fade {
+		border-bottom:none;
+		padding-bottom:0px;
+	}
+	
+	.latest-news .entry-content p {
+		margin-bottom:0px;
+	}
+
+	
+	.entry-title {
+		margin-bottom:10px;
+	}
+	
+	.entry-meta a {
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+		font-size:12px;
+		color:#999;
+	}
+	
+	.entry-meta a:hover {
+		color:#000;
+	}
+	
+	.entry-meta span a:after {
+		content: "|";
+		padding: 0 2px 0 7px;
+		color:rgba(0,0,0,0.2);
+	}
+	
+	.entry-meta span:last-child a:after {
+		content:"";
+		padding-left:0px;
+	}
+	
+	.entry-content {
+		margin-top:20px;
+	}
+	
+	.entry-meta span.entry-date i {
+		font-size:16px;
+		line-height:18px;
+		margin-right:5px;	
+	}
+	
+	.entry-meta span.entry-date a {
+		line-height:18px;
+		vertical-align: top;		
+	}
+	
+	.blog-quote {
+		font-size:24px;
+		color:#000;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-style:italic;
+		line-height:30px;
+		background-image:url(../images/quote.png);
+		background-repeat:no-repeat;
+		background-size: 44px 38px;
+		padding-top:5px;
+		margin-bottom:20px;
+	}
+	
+	.blog-quote-author {
+		width:100%;
+		text-align:right;
+	}
+	
+	.blog-link {
+		padding:20px;
+		background-color:#000;
+		margin-bottom:30px;
+	}
+	
+	.blog-link a {
+		
+		color:#FFF;
+		word-break:break-all;
+	}
+	
+	.clapat-button.blog-read-more {
+		margin-top:30px;
+		margin-bottom:10px;
+	}
+	
+	
+	
+	
+	
+/* Blog Navigation */	
+	
+	.blog-navigation {
+		margin:0 auto;
+		position:relative;
+		border-top:#f0f0f0 1px solid;
+		padding:80px 0;
+		text-align:center;
+	}
+	
+	.blog-navigation ul {
+		display:block;
+		margin-left:-4px;
+		margin-bottom:0px;
+		text-align:center;
+	}
+	
+	.blog-navigation ul li {
+		display:inline-block;
+		width:40px;
+		height:40px;
+		border:3px #f7f7f7 solid;
+		line-height:40px;
+		margin:0 10px;
+		color:#000;
+		cursor:pointer;
+		transition:all 0.3s ease 0s;
+		-moz-transition:all 0.3s ease 0s;
+		-webkit-transition:all 0.3s ease 0s;
+		-o-transition:all 0.3s ease 0s;
+	}
+	
+	.blog-navigation ul li i {
+		font-size:18px;
+	}
+	
+	.blog-navigation ul li.active, .blog-navigation ul li:hover {
+		border:3px #000 solid;
+	}
+	
+	
+	
+	
+	
+/* Sidebar */	
+	
+	#sidebar {
+		margin-left: 50px;
+		margin-top: 40px;
+		min-height: 500px;
+	}
+	
+	.widget {
+		margin-bottom:60px;
+		font-size:13px;		
+	}
+	
+	.widget ul {
+		margin:0px;
+	}
+
+	.heading h6 {
+		margin-bottom:20px;
+		text-transform:uppercase;
+		color: #000;
+		font-weight:bold
+	}	
+
+	input#search {
+		background:url("../images/zoom-search.png") no-repeat 10px 10px #f5f5f5;
+		background-size:30px 30px;
+		color: #000;
+		font-size: 13px;
+		height: 50px;
+		padding: 10px 10px 10px 45px;
+		width: 100%;
+		border:0;
+		transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-webkit-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+		box-sizing: border-box;
+		
+	}
+	
+	input#search:focus {
+		background:url("../images/zoom-search.png") no-repeat 10px 10px #e1e1e1;
+		background-size:30px 30px;
+	}	
+
+	#sidebar .widget_categories li {
+		border-bottom: 1px solid #ebebeb;
+		display: block;
+		padding: 15px 0;
+	}	
+
+	#sidebar .widget_categories li:first-child {
+		border-top: 1px solid #ebebeb;
+	}	
+
+	#sidebar .widget_categories li a {
+		color: #000;
+	}	
+
+	#sidebar .widget_categories li a:hover {
+		color:#999;
+	}	
+
+	#sidebar .recent-posts li {
+		border-top: 1px solid #ebebeb;
+		padding-top:15px;
+		list-style:none;
+	}	
+
+	#sidebar .recent-posts p {
+		padding-bottom:15px;
+		font-family: Georgia,"Times New Roman",Times,serif;
+		font-size: 12px;
+		font-style: italic;
+		margin:0px;
+	}	
+
+	#sidebar .recent-posts {
+		border-bottom: 1px solid #ebebeb;
+	}	
+
+	#sidebar .recent-posts li a {
+		color: #000;
+	}	
+
+	#sidebar .recent-posts li a:hover {
+		color:#999;
+	}	
+
+	#sidebar .tags a {
+		background-color:#000;
+		color: #FFFFFF;
+		cursor: pointer;
+		display: inline-block;
+		float: left;
+		font-size: 12px;
+		margin: 5px 5px 0 0;
+		padding: 7px 10px;
+		position: relative;
+		text-transform: capitalize;
+	}	
+
+	#sidebar .tags a:hover {
+		background-color:#999;
+	}	
+
+	#sidebar .widget_archives li {
+		background: url("images/arrow-li.png") no-repeat scroll 0 22px transparent;
+		background-size:5px 8px;
+		border-bottom: 1px solid #ebebeb;
+		display: block;
+		padding: 15px 0;
+	}	
+
+	#sidebar .widget_archives li:first-child {
+		border-top: 1px solid #ebebeb;
+	}	
+
+	#sidebar .widget_archives li a {
+		color: #000;
+	}	
+
+	#sidebar .widget_archives li a:hover {
+		color:#999;
+	}
+
+
+
+
+
+/* Blog Comments */	
+
+	.blog_comments {
+		border-bottom:1px solid #ebebeb;
+		margin-bottom:100px;
+		padding-top:20px;
+		padding-bottom:40px;
+	}
+	
+	.blog_comments h5 {
+		margin-bottom: 40px;
+		font-weight:bold;
+	}
+	
+	.user_comment {
+		background: url("../images/user.png") no-repeat scroll 0 0 transparent;
+		color: #000;
+		margin-bottom: 40px;
+		padding-left: 100px;
+	}
+	
+	.comment-name {
+		margin-bottom:0px
+	}
+	
+	.comment-date {
+		color: #999;
+		font-family: Georgia,"Times New Roman",Times,serif;
+		font-style: italic;
+		margin-bottom: 10px;
+	}
+	
+	.comment-text {
+		color: #999999;
+		margin-bottom:5px;
+	}
+	
+	.user_comment_reply {
+		background: url("../images/user.png") no-repeat scroll 0 0 transparent;
+		color: #000;
+		padding-left: 100px;
+		margin-top: 40px;
+	}
+	
+	.comment_formular h5 {
+		font-weight:bold;
+		margin-bottom:40px;
+	}
+	
+	#commentsform input[type="text"], textarea {
+		color: #000;
+		font-size: 13px;
+		height: 40px;
+		padding:10px;
+		width: 100%;
+		background:#f5f5f5;
+		margin-bottom:20px;
+		border:0;
+		transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-webkit-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+		box-sizing: border-box;
+	}
+	
+	#commentsform input[type=text]:focus, #commentsform textarea:focus, input[type=email]:focus {
+		background-color: #e1e1e1;
+	}
+	
+	#commentsform textarea {
+		height:90px;
+		resize:none;
+		padding:10px;
+	}

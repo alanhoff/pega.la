@@ -1,0 +1,35 @@
+{
+  "name": "pega.la",
+  "version": "0.0.1",
+  "description": "Shorter URL",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcosbergamo/pega.la.git"
+  },
+  "keywords": [
+    "short",
+    "url"
+  ],
+  "author": "Marcos Bérgamo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosbergamo/pega.la/issues"
+  },
+  "homepage": "https://github.com/marcosbergamo/pega.la",
+  "dependencies": {
+    "boom": "^2.6.0",
+    "hapi": "^7.5.2",
+    "hashids": "^1.0.1",
+    "joi": "^4.8.1",
+    "level-hooks": "^4.5.0",
+    "leveldown": "~0.10.0",
+    "levelup": "^0.19.0",
+    "requi": "^0.2.2",
+    "winston": "^0.8.3",
+    "xconf": "0.0.2"
+  }
+}
